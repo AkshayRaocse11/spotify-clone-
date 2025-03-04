@@ -19,7 +19,7 @@ const AlbumPlayList: React.FC = () => {
     const fetchPlaylists = async (): Promise<void> => {
       try {
         const response = await fetch(
-          "https://api.spotify.com/v1/browse/categories/mood/playlists",
+          "https://api.spotify.com/v1/browse/categories/mood",
           {
             headers: {
               Authorization: accessToken,
@@ -28,7 +28,7 @@ const AlbumPlayList: React.FC = () => {
         );
 
         const data = await response.json();
-
+        console.log(data)
         if (response.ok) {
           setPlaylists(data.playlists.items);
         } else {

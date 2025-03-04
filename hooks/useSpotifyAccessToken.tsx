@@ -6,8 +6,8 @@ const useSpotifyAccessToken = (): string => {
   useEffect(() => {
     const fetchAccessToken = async (): Promise<void> => {
       try {
-        const clientId: string = "a62996ee08fd4db6a4c8662d85b9c1d6"; // Replace with your client ID
-        const clientSecret: string = "80273e8a780f4f429f05839dcef1e913"; // Replace with your client secret
+        const clientId: string = "6732ba4dd7494853a25a68a4b4874dea"; // Replace with your client ID
+        const clientSecret: string = "b122dd71d2fc47c2867da612675aed8d"; // Replace with your client secret
 
         const response = await fetch("https://accounts.spotify.com/api/token", {
           method: "POST",
